@@ -45,7 +45,7 @@ CLICKATELL_FIELD=
 - `CLICKATELL_FIELD` - The default field to use for the `to` if the `routeNotificationForClickatell()` method is not implemented on the notifiable class.
 
 
-### Tracking
+### Tracking (Optional)
 
 Tracking logs the send status from Clickatell. `php artisan migrate` needs to be run once enabled.
 ```dotenv
@@ -55,7 +55,7 @@ CLICKATELL_TRACKING_TABLE=
 - `CLICKATELL_TRACK` - Tracking true of false.
 - `CLICKATELL_TRACKING_TABLE` - Optional table name for tracking.
 
-### Callback
+### Callback (Optional)
 
 With delivery notifications enabled, set the credentials and URL here. Tracking needs to be enabled.
 ```dotenv
