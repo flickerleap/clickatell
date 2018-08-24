@@ -56,7 +56,7 @@ class ClickatellClient
     {
         collect($responses)->each(function ($response) use ($to, $message) {
             $code = (int)$response['errorCode'];
-            $error = $response['error'] ? (string)$response['error'] : 'Success';
+            $error = $response['error'] ? (string)$response['error'] : 'SUCCESS';
             $this->track($to, $message, $code, $error, $response['apiMessageId']);
 
             if ($code > 0) {
