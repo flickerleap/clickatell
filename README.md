@@ -42,7 +42,7 @@ php artisan vendor:publish --provider="FlickerLeap\Clickatell\ClickatellServiceP
 ```dotenv
 CLICKATELL_FIELD=
 ```
-- `CLICKATELL_FIELD` - The default field to use for the `to`
+- `CLICKATELL_FIELD` - The default field to use for the `to` if the `routeNotificationForClickatell()` method is not implemented on the notifiable class.
 
 
 ### Tracking
@@ -140,7 +140,7 @@ class SMSUser extends Notification implements ShouldQueue
 
 ### To
 
-Optionally the default to field can be changed by specifying `->to()`
+Optionally the `to` field can be dynamically changed per call by specifying `->to()`
 
 ```php
     /**
