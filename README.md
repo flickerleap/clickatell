@@ -19,6 +19,7 @@ We drew a lot of inspiration from [laravel-notification-channels/clickatell](htt
     - [To](#to)
     - [Call](#call)
 - [Testing](#testing)
+- [Tests](#tests)
 - [Credits](#credits)
 
 ## Installation
