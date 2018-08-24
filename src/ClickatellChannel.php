@@ -40,7 +40,7 @@ class ClickatellChannel
 
         $message = $notification->toClickatell($notifiable);
 
-        if (is_null($to)) {
+        if (!is_null($message->getTo())) {
             $to = $message->getTo();
         }
 
