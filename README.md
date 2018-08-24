@@ -53,7 +53,7 @@ CLICKATELL_TRACK=
 CLICKATELL_TRACKING_TABLE=
 ```
 - `CLICKATELL_TRACK` - Tracking true of false.
-- `CLICKATELL_TRACKING_TABLE` - Table name for tracking.
+- `CLICKATELL_TRACKING_TABLE` - Optional table name for tracking.
 
 ### Callback
 
