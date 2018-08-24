@@ -2,7 +2,7 @@
     "name": "flickerleap/clickatell",
     "description": "Laravel Notification integration for Clickatell",
     "type": "library",
-    "license": "Dunno",
+    "license": "MIT",
     "minimum-stability": "dev",
     "require": {
       "arcturial/clickatell": "^3.0"
