@@ -163,7 +163,11 @@ $user->notify(new SMSUser());
 ```
 
 ## Testing
+If `APP_ENV` is set to local, laravel log entries will be created.
+
+## Tests
 TODO
+
 ## Credits
 
 - [laravel-notification-channels](https://github.com/laravel-notification-channels/clickatell)
