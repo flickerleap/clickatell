@@ -11,5 +11,11 @@
         "psr-4": {
             "FlickerLeap\\Clickatell\\": "src"
         }
+    },
+    "extra": {
+    "laravel": {
+        "providers": [
+            "FlickerLeap\\Clickatell\\ClickatellServiceProvider"
+        ]
     }
 }
