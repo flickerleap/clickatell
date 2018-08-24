@@ -7,6 +7,10 @@ use Illuminate\Notifications\Notification;
 
 class ClickatellChannel
 {
+    /**
+     * @var string
+     */
+    public $to;
 
     /**
      * @var \FlickerLeap\Clickatell\ClickatellClient
@@ -24,6 +28,14 @@ class ClickatellChannel
     }
 
     /**
+     * @param $to
+     */
+    public function to($to)
+    {
+        $this->to = $to;
+    }
+
+    /**
      * Send the notification
      *
      * @param mixed $notifiable
@@ -33,10 +45,18 @@ class ClickatellChannel
      */
     public function send($notifiable, Notification $notification)
     {
-        if (!$to = $notifiable->routeNotificationForClickatell($notification)) {
-            if (!$to = $notifiable->routeNotificationForClickatell($notification->{config('services.clickatell.to')})) {
-                throw ConfigError::configNotSet('services.clickatell.to', 'CLICKATELL_FIELD');
-            }
+        $to = $this->to ?? null;
+
+        if (is_null($to)) {
+            $to = $notifiable->routeNotificationForClickatell($notification);
+        }
+
+        if (is_null($to)) {
+            $to = $notifiable->routeNotificationForClickatell($notification->{config('services.clickatell.to')});
+        }
+
+        if (is_null($to)) {
+            throw ConfigError::configNotSet('services.clickatell.to', 'CLICKATELL_FIELD');
         }
 
         $message = $notification->toClickatell($notifiable);

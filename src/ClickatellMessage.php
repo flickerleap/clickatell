@@ -8,10 +8,6 @@ class ClickatellMessage
      * @var string
      */
     public $content;
-    /**
-     * @var string
-     */
-    public $to;
 
     /**
      * ClickatellMessage constructor.
@@ -45,29 +41,10 @@ class ClickatellMessage
     }
 
     /**
-     * @param $to
-     * @return $this
-     */
-    public function to($to)
-    {
-        $this->to = $to;
-
-        return $this;
-    }
-
-    /**
      * @return string
      */
     public function getContent()
     {
         return $this->content;
-    }
-
-    /**
-     * @return string
-     */
-    public function getTo()
-    {
-        return $this->to;
     }
 }
