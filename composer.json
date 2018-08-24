@@ -13,9 +13,10 @@
         }
     },
     "extra": {
-    "laravel": {
-        "providers": [
-            "FlickerLeap\\Clickatell\\ClickatellServiceProvider"
-        ]
+        "laravel": {
+            "providers": [
+                "FlickerLeap\\Clickatell\\ClickatellServiceProvider"
+            ]
+        }
     }
 }
