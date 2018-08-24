@@ -13,7 +13,7 @@ class ClickatellCallback extends Controller
      */
     public function handle(Callback $request)
     {
-        $entry = DB::table(config('services.clickatell.log_table'))->where('message_id', $request->input('messageId'));
+        $entry = DB::table(config('services.clickatell.tracking_table'))->where('message_id', $request->input('messageId'));
 
         switch ($request->input('status')) {
             case 'DELIVERED_TO_GATEWAY':
