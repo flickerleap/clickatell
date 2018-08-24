@@ -169,4 +169,4 @@ TODO
 - [laravel-notification-channels](https://github.com/laravel-notification-channels/clickatell)
 - [etiennemarais](https://github.com/etiennemarais)
 - [arcturial](https://github.com/arcturial)
-    - For the [Clickatell Client implementation](https://github.com/arcturial/clickatell) which is leverage on this package.
+    - For the [Clickatell Client implementation](https://github.com/arcturial/clickatell) which is leveraged on this package.
