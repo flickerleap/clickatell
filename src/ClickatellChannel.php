@@ -34,7 +34,7 @@ class ClickatellChannel
     public function send($notifiable, Notification $notification)
     {
         if (!$to = $notifiable->routeNotificationForClickatell($notification)) {
-            if (!$to = config('services.clickatell.to')) {
+            if (!$to = $notifiable->routeNotificationForClickatell($notification->{config('services.clickatell.to')})) {
                 throw ConfigError::configNotSet('services.clickatell.to', 'CLICKATELL_FIELD');
             }
         }
