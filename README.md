@@ -58,7 +58,7 @@ CLICKATELL_TRACKING_TABLE=
 
 ### Callback
 
-Optionally, with delivery notifications enabled, set the credentials and URL here. Tracking needs to be enabled.
+Optionally, with delivery notifications enabled, set the credentials and URL here. Tracking needs to be enabled. A value of `/clickatellCallback` would be accessed at `https://mysite.com/clickatellCallback`
 ```dotenv
 CLICKATELL_CALLBACK_URL=
 CLICKATELL_USERNAME=
