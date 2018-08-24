@@ -7,7 +7,7 @@ We drew a lot of inspiration from [laravel-notification-channels/clickatell](htt
 ## Contents
 
 - [Installation](#installation)
-    - [.ENV](#.env)
+    - [.env](#.env)
     - [Publish](#publish)
 - [Configuration](#configuration)
     - [Default to](#default-to)
@@ -26,7 +26,7 @@ We drew a lot of inspiration from [laravel-notification-channels/clickatell](htt
 composer require flickerleap/clickatell
 ```
 
-### .ENV
+### .env
 ```dotenv
 CLICKATELL_TOKEN=
 ```
