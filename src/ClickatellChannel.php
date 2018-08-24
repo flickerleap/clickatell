@@ -7,7 +7,9 @@ use Illuminate\Notifications\Notification;
 
 class ClickatellChannel
 {
-
+    /**
+     * @var string
+     */
     public $to;
 
     /**

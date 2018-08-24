@@ -8,10 +8,6 @@ class ClickatellMessage
      * @var string
      */
     public $content;
-    /**
-     * @var string
-     */
-    public $to;
 
     /**
      * ClickatellMessage constructor.
