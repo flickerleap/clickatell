@@ -57,7 +57,7 @@ class ClickatellClient
         collect($responses)->each(function ($response) use ($to, $message) {
             $code = (int)$response['errorCode'];
             $error = $response['error'] ? (string)$response['error'] : 'Success';
-            $this->log($to, $message, $code, $error, $response['apiMessageId']);
+            $this->track($to, $message, $code, $error, $response['apiMessageId']);
 
             if ($code > 0) {
                 throw CouldNotSendNotification::serviceRespondedWithAnError($error, $code);
@@ -72,11 +72,11 @@ class ClickatellClient
      * @param $status
      * @param $id
      */
-    private function log($to, $content, $code, $status, $id)
+    private function track($to, $content, $code, $status, $id)
     {
-        if (config('services.clickatell.log') == true
-            && \Illuminate\Support\Facades\Schema::hasTable(config('services.clickatell.log_table'))) {
-            \Illuminate\Support\Facades\DB::table(config('services.clickatell.log_table'))->insert(
+        if (config('services.clickatell.track') == true
+            && \Illuminate\Support\Facades\Schema::hasTable(config('services.clickatell.tracking_table'))) {
+            \Illuminate\Support\Facades\DB::table(config('services.clickatell.tracking_table'))->insert(
                 [
                     'to' => $to,
                     'content' => $content,

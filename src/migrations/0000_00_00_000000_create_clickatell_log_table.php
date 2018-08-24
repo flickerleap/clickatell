@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateClickatellLogTable extends Migration
+class CreateClickatellTrackingTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreateClickatellLogTable extends Migration
      */
     public function up()
     {
-        if (config('services.clickatell.log') == true) {
-            Schema::create(config('services.clickatell.log_table'), function (Blueprint $table) {
+        if (config('services.clickatell.track') == true) {
+            Schema::create(config('services.clickatell.tracking_table'), function (Blueprint $table) {
                 $table->increments('id');
                 $table->string('to', 12);
                 $table->text('content');
@@ -35,6 +35,6 @@ class CreateClickatellLogTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(config('services.clickatell.log_table'));
+        Schema::dropIfExists(config('services.clickatell.tracking_table'));
     }
 }
