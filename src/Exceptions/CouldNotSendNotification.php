@@ -42,4 +42,14 @@ class CouldNotSendNotification extends Exception
     {
         return new static("No response from Clickatell, likely API token.");
     }
+
+    /**
+     * No recipient set.
+     *
+     * @return \FlickerLeap\Clickatell\Exceptions\CouldNotSendNotification
+     */
+    public static function recipientNotSet()
+    {
+        return new static("No recipient was specified.");
+    }
 }
