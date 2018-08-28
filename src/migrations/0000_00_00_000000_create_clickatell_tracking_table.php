@@ -13,19 +13,17 @@ class CreateClickatellTrackingTable extends Migration
      */
     public function up()
     {
-        if (config('services.clickatell.track') == true) {
-            Schema::create(config('services.clickatell.tracking_table'), function (Blueprint $table) {
-                $table->increments('id');
-                $table->string('to', 12);
-                $table->text('content');
-                $table->string('code', 10);
-                $table->text('status');
-                $table->string('message_id', 32);
-                $table->timestamp('delivered_to_gateway')->nullable();
-                $table->timestamp('received_by_recipient')->nullable();
-                $table->timestamp('created_at')->useCurrent();
-            });
-        }
+        Schema::create(config('services.clickatell.tracking_table'), function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('to', 12);
+            $table->text('content');
+            $table->string('code', 10);
+            $table->text('status');
+            $table->string('message_id', 32);
+            $table->timestamp('delivered_to_gateway')->nullable();
+            $table->timestamp('received_by_recipient')->nullable();
+            $table->timestamp('created_at')->useCurrent();
+        });
     }
 
     /**
