@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateClickatellTrackingTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -35,4 +35,4 @@ class CreateClickatellTrackingTable extends Migration
     {
         Schema::dropIfExists(config('services.clickatell.tracking_table'));
     }
-}
+};
